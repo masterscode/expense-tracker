@@ -12,6 +12,7 @@ const initialState = {
 };
 
 export const GlobalContext = createContext(initialState); 
+GlobalContext.displayName = "The Global State";
 
 export const GlobalProvider = ({children})=>{
     const [state, dispatch] = useReducer(AppReducer, initialState);
